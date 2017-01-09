@@ -8,25 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		7D069F76B375B0ACE734226D /* Pods_Reactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6730464C886D8DE9BF8761AF /* Pods_Reactive.framework */; };
-		8A95650D1E24099900BB9E06 /* Reactive.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A95650B1E24099900BB9E06 /* Reactive.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8A9565161E240BD200BB9E06 /* ReactiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565151E240BD200BB9E06 /* ReactiveController.swift */; };
 		8A95651B1E240BE400BB9E06 /* ReactiveUserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565171E240BE400BB9E06 /* ReactiveUserInterface.swift */; };
 		8A95651C1E240BE400BB9E06 /* ReactiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565181E240BE400BB9E06 /* ReactiveViewController.swift */; };
 		8A95651D1E240BE400BB9E06 /* ReactiveTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565191E240BE400BB9E06 /* ReactiveTabBarController.swift */; };
 		8A95651E1E240BE400BB9E06 /* ReactiveTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A95651A1E240BE400BB9E06 /* ReactiveTableViewController.swift */; };
+		8A9565201E240E4500BB9E06 /* Reactive.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8A95651F1E240E4500BB9E06 /* Reactive.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1FC1297CEE52FFA6848855C3 /* Pods-Reactive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reactive.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Reactive/Pods-Reactive.release.xcconfig"; sourceTree = "<group>"; };
 		6730464C886D8DE9BF8761AF /* Pods_Reactive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reactive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A9565081E24099900BB9E06 /* Reactive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reactive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A95650B1E24099900BB9E06 /* Reactive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reactive.h; sourceTree = "<group>"; };
 		8A95650C1E24099900BB9E06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A9565151E240BD200BB9E06 /* ReactiveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveController.swift; sourceTree = "<group>"; };
 		8A9565171E240BE400BB9E06 /* ReactiveUserInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveUserInterface.swift; sourceTree = "<group>"; };
 		8A9565181E240BE400BB9E06 /* ReactiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveViewController.swift; sourceTree = "<group>"; };
 		8A9565191E240BE400BB9E06 /* ReactiveTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveTabBarController.swift; sourceTree = "<group>"; };
 		8A95651A1E240BE400BB9E06 /* ReactiveTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveTableViewController.swift; sourceTree = "<group>"; };
+		8A95651F1E240E4500BB9E06 /* Reactive.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; name = Reactive.podspec; path = /Users/karim/Documents/Karim/Work/Karim/OpenSource/Reactive/Reactive.podspec; sourceTree = "<absolute>"; };
 		CC1E37BDABA327934F1C9252 /* Pods-Reactive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reactive.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Reactive/Pods-Reactive.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,7 +45,9 @@
 		8A9564FE1E24099900BB9E06 = {
 			isa = PBXGroup;
 			children = (
+				8A95651F1E240E4500BB9E06 /* Reactive.podspec */,
 				8A95650A1E24099900BB9E06 /* Reactive */,
+				8A9565211E24113000BB9E06 /* Supporting Files */,
 				8A9565091E24099900BB9E06 /* Products */,
 				D9249513B1BA07DC353036D0 /* Pods */,
 				909C6E11FF156E987F0520CC /* Frameworks */,
@@ -65,8 +67,6 @@
 			children = (
 				8A9565131E240BC900BB9E06 /* Controllers */,
 				8A9565141E240BC900BB9E06 /* User Interfaces */,
-				8A95650B1E24099900BB9E06 /* Reactive.h */,
-				8A95650C1E24099900BB9E06 /* Info.plist */,
 			);
 			path = Reactive;
 			sourceTree = "<group>";
@@ -88,6 +88,14 @@
 				8A95651A1E240BE400BB9E06 /* ReactiveTableViewController.swift */,
 			);
 			path = "User Interfaces";
+			sourceTree = "<group>";
+		};
+		8A9565211E24113000BB9E06 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A95650C1E24099900BB9E06 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		909C6E11FF156E987F0520CC /* Frameworks */ = {
@@ -114,7 +122,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A95650D1E24099900BB9E06 /* Reactive.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A9565201E240E4500BB9E06 /* Reactive.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +352,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Reactive/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karimsallam.Reactive;
@@ -366,7 +374,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Reactive/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karimsallam.Reactive;
