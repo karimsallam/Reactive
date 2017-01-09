@@ -9,7 +9,7 @@
 import UIKit
 import ReactiveSwift
 
-class ReactiveTableViewController: UITableViewController {
+open class ReactiveTableViewController: UITableViewController {
     
     public let reactiveState = MutableProperty<ReactiveState>(.loading)
     
@@ -47,11 +47,11 @@ class ReactiveTableViewController: UITableViewController {
         // Do nothing.
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override open func numberOfSections(in tableView: UITableView) -> Int {
         return 0
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
     

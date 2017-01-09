@@ -9,16 +9,16 @@
 import Foundation
 import ReactiveSwift
 
-public class ReactiveController: NSObject {
+open class ReactiveController: NSObject {
     
     private(set) var reactiveUserInterfaces = [ReactiveUserInterface]()
     
-    func add(reactiveUserInterface: ReactiveUserInterface) {
+    public func add(reactiveUserInterface: ReactiveUserInterface) {
         reactiveUserInterfaces.append(reactiveUserInterface)
         observe(reactiveUserInterface: reactiveUserInterface)
     }
     
-    func remove(reactiveUserInterface: ReactiveUserInterface) {
+    public func remove(reactiveUserInterface: ReactiveUserInterface) {
         guard let index = reactiveUserInterfaces.index(where: { $0 == reactiveUserInterface }) else {
             fatalError("\(reactiveUserInterface) not found")
         }

@@ -38,6 +38,6 @@ public protocol ReactiveUserInterface: class {
     func prepareForReuse()
 }
 
-func ==(lhs: ReactiveUserInterface, rhs: ReactiveUserInterface) -> Bool {
+public func ==(lhs: ReactiveUserInterface, rhs: ReactiveUserInterface) -> Bool {
     return lhs.reactiveIdentifier == rhs.reactiveIdentifier
 }

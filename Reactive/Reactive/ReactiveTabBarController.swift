@@ -9,7 +9,7 @@
 import UIKit
 import ReactiveSwift
 
-class ReactiveTabBarController: UITabBarController {
+open class ReactiveTabBarController: UITabBarController {
     
     public let reactiveState = MutableProperty<ReactiveState>(.loading)
     

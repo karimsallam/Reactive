@@ -9,7 +9,7 @@
 import UIKit
 import ReactiveSwift
 
-public class ReactiveViewController: UIViewController {
+open class ReactiveViewController: UIViewController {
     
     public let reactiveState = MutableProperty<ReactiveState>(.loading)
     
