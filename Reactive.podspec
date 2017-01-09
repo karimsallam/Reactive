@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     s.default_subspec = "Core"
     
     s.subspec "Core" do |ss|
-        ss.source_files  = "Reactive/Reactive/"
+        ss.source_files  = "Reactive/Reactive/*"
         ss.dependency "ReactiveSwift", "1.0.0-alpha.4"
         ss.dependency "ReactiveCocoa", "5.0.0-alpha.3"
         ss.framework  = "Foundation"
