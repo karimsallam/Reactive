@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D069F76B375B0ACE734226D /* Pods_Reactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6730464C886D8DE9BF8761AF /* Pods_Reactive.framework */; };
+		8A6D031B1E27F3CC00DE823A /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D031A1E27F3CC00DE823A /* ApplicationController.swift */; };
 		8A9565201E240E4500BB9E06 /* Reactive.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8A95651F1E240E4500BB9E06 /* Reactive.podspec */; };
 		8A9565271E241A2200BB9E06 /* ReactiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565221E241A2200BB9E06 /* ReactiveController.swift */; };
 		8A9565281E241A2200BB9E06 /* ReactiveTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565231E241A2200BB9E06 /* ReactiveTabBarController.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		1FC1297CEE52FFA6848855C3 /* Pods-Reactive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reactive.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Reactive/Pods-Reactive.release.xcconfig"; sourceTree = "<group>"; };
 		6730464C886D8DE9BF8761AF /* Pods_Reactive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reactive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A6D031A1E27F3CC00DE823A /* ApplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationController.swift; sourceTree = "<group>"; };
 		8A9565081E24099900BB9E06 /* Reactive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reactive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A95650C1E24099900BB9E06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A95651F1E240E4500BB9E06 /* Reactive.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; name = Reactive.podspec; path = /Users/karim/Documents/Karim/Work/Karim/OpenSource/Reactive/Reactive.podspec; sourceTree = "<absolute>"; };
@@ -42,6 +44,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A6D03131E27F34800DE823A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8A6D03141E27F35000DE823A /* Application */,
+				8A6D03191E27F3B600DE823A /* Reactive */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8A6D03141E27F35000DE823A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8A6D031A1E27F3CC00DE823A /* ApplicationController.swift */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		8A6D03151E27F35600DE823A /* Reactive User Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				8A9565251E241A2200BB9E06 /* ReactiveUserInterface.swift */,
+				8A6D03181E27F39500DE823A /* Table View */,
+				8A6D03171E27F38700DE823A /* View */,
+				8A6D03161E27F36900DE823A /* Tab Bar */,
+			);
+			name = "Reactive User Interfaces";
+			sourceTree = "<group>";
+		};
+		8A6D03161E27F36900DE823A /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				8A9565231E241A2200BB9E06 /* ReactiveTabBarController.swift */,
+			);
+			name = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		8A6D03171E27F38700DE823A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8A9565261E241A2200BB9E06 /* ReactiveViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8A6D03181E27F39500DE823A /* Table View */ = {
+			isa = PBXGroup;
+			children = (
+				8A9565241E241A2200BB9E06 /* ReactiveTableViewController.swift */,
+			);
+			name = "Table View";
+			sourceTree = "<group>";
+		};
+		8A6D03191E27F3B600DE823A /* Reactive */ = {
+			isa = PBXGroup;
+			children = (
+				8A9565221E241A2200BB9E06 /* ReactiveController.swift */,
+			);
+			name = Reactive;
+			sourceTree = "<group>";
+		};
 		8A9564FE1E24099900BB9E06 = {
 			isa = PBXGroup;
 			children = (
@@ -65,11 +127,8 @@
 		8A95650A1E24099900BB9E06 /* Reactive */ = {
 			isa = PBXGroup;
 			children = (
-				8A9565221E241A2200BB9E06 /* ReactiveController.swift */,
-				8A9565231E241A2200BB9E06 /* ReactiveTabBarController.swift */,
-				8A9565241E241A2200BB9E06 /* ReactiveTableViewController.swift */,
-				8A9565251E241A2200BB9E06 /* ReactiveUserInterface.swift */,
-				8A9565261E241A2200BB9E06 /* ReactiveViewController.swift */,
+				8A6D03151E27F35600DE823A /* Reactive User Interfaces */,
+				8A6D03131E27F34800DE823A /* Controllers */,
 			);
 			path = Reactive;
 			sourceTree = "<group>";
@@ -215,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A6D031B1E27F3CC00DE823A /* ApplicationController.swift in Sources */,
 				8A9565281E241A2200BB9E06 /* ReactiveTabBarController.swift in Sources */,
 				8A95652A1E241A2200BB9E06 /* ReactiveUserInterface.swift in Sources */,
 				8A9565291E241A2200BB9E06 /* ReactiveTableViewController.swift in Sources */,
