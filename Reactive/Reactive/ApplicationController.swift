@@ -12,7 +12,7 @@ open class ApplicationController: NSObject {
     
     let applicationDelegates: [UIApplicationDelegate]?
     
-    init(application: UIApplication, launchOptions: [AnyHashable : Any]?, applicationDelegates: [UIApplicationDelegate]?) {
+    public init(application: UIApplication, launchOptions: [AnyHashable : Any]?, applicationDelegates: [UIApplicationDelegate]?) {
         self.applicationDelegates = applicationDelegates
     }
 }
