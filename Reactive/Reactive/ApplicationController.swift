@@ -10,7 +10,7 @@ import UIKit
 
 open class ApplicationController: UIResponder {
     
-    let applicationDelegates: [UIApplicationDelegate]?
+    public let applicationDelegates: [UIApplicationDelegate]?
     
     public override init() {
         applicationDelegates = nil
