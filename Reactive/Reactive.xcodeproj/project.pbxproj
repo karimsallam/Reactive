@@ -33,6 +33,7 @@
 		8A6D03B71E29131400DE823A /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D031A1E27F3CC00DE823A /* ApplicationController.swift */; };
 		8A6D03B81E29131400DE823A /* ReactiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565221E241A2200BB9E06 /* ReactiveController.swift */; };
 		8A6D03BA1E29132D00DE823A /* ReactiveTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D03B91E29132D00DE823A /* ReactiveTableViewControllerTests.swift */; };
+		8A6D03C11E293BAE00DE823A /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D03C01E293BAE00DE823A /* Reactive.swift */; };
 		8A9565201E240E4500BB9E06 /* Reactive.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8A95651F1E240E4500BB9E06 /* Reactive.podspec */; };
 		8A9565271E241A2200BB9E06 /* ReactiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565221E241A2200BB9E06 /* ReactiveController.swift */; };
 		8A9565281E241A2200BB9E06 /* ReactiveTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565231E241A2200BB9E06 /* ReactiveTabBarController.swift */; };
@@ -71,6 +72,7 @@
 		8A6D03A91E2912E900DE823A /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		8A6D03AB1E2912E900DE823A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A6D03B91E29132D00DE823A /* ReactiveTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveTableViewControllerTests.swift; sourceTree = "<group>"; };
+		8A6D03C01E293BAE00DE823A /* Reactive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; };
 		8A835ADB676B65673C469DB4 /* Pods_Application.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A9565081E24099900BB9E06 /* Reactive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reactive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A95650C1E24099900BB9E06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				8A95650C1E24099900BB9E06 /* Info.plist */,
+				8A6D03C01E293BAE00DE823A /* Reactive.swift */,
 				8A6D03151E27F35600DE823A /* Reactive User Interfaces */,
 				8A6D03131E27F34800DE823A /* Controllers */,
 			);
@@ -568,6 +571,7 @@
 				8A9565281E241A2200BB9E06 /* ReactiveTabBarController.swift in Sources */,
 				8A95652A1E241A2200BB9E06 /* ReactiveUserInterface.swift in Sources */,
 				8A6D03281E28DDB900DE823A /* ReactiveTableViewCell.swift in Sources */,
+				8A6D03C11E293BAE00DE823A /* Reactive.swift in Sources */,
 				8A9565291E241A2200BB9E06 /* ReactiveTableViewController.swift in Sources */,
 				8A95652B1E241A2200BB9E06 /* ReactiveViewController.swift in Sources */,
 				8A9565271E241A2200BB9E06 /* ReactiveController.swift in Sources */,
@@ -819,6 +823,7 @@
 				8A6D03B11E2912E900DE823A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A9565021E24099900BB9E06 /* Build configuration list for PBXProject "Reactive" */ = {
 			isa = XCConfigurationList;

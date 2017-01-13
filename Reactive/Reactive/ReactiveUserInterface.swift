@@ -9,13 +9,6 @@
 import Foundation
 import ReactiveSwift
 
-public enum ReactiveState {
-
-    case loading
-    
-    case ready
-}
-
 public enum ViewState {
     
     case Invisible

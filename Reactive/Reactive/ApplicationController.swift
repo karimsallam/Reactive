@@ -7,19 +7,50 @@
 //
 
 import UIKit
+import ReactiveSwift
+
+@objc public protocol ApplicationDelegate: UIApplicationDelegate {
+    
+    @objc optional func applicationDidFinishLoadingWindow(_ application: UIApplication)
+}
 
 open class ApplicationController: UIResponder {
     
-    public let applicationDelegates: [UIApplicationDelegate]?
+    public var window: UIWindow?
     
-    public override init() {
-        applicationDelegates = nil
-    }
+    public var applicationDelegates: [ApplicationDelegate]?
+    
+    public let reactiveState = MutableProperty<ReactiveState>(.loading)
 }
 
-extension ApplicationController: UIApplicationDelegate {
+extension ApplicationController: ApplicationDelegate {
+    
+    open func applicationDidFinishLoadingWindow(_ application: UIApplication) {
+        applicationDelegates?.forEach { ad in
+            ad.applicationDidFinishLoadingWindow?(application)
+        }
+    }
     
     open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
+        
+        // If the Application has a window it will be safe to work on the UI when the window's rootViewController becomes visible.
+        if let window = window {
+            let rootUserInterface = window.rootViewController as! ReactiveUserInterface
+            rootUserInterface.viewState.producer.startWithSignal { observer, disposable in
+                observer.observeValues { [weak self] viewState in
+                    if viewState == .Visible {
+                        self?.reactiveState.value = .ready
+                        
+                        self?.applicationDelegates?.forEach { ad in
+                            ad.applicationDidFinishLoadingWindow?(application)
+                        }
+                        
+                        disposable.dispose()
+                    }
+                }
+            }
+        }
+        
         var canHandle = false
         applicationDelegates?.forEach { ad in
             if let result = ad.application?(application, didFinishLaunchingWithOptions: launchOptions) {
