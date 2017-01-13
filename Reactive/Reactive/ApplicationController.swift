@@ -12,13 +12,23 @@ open class ApplicationController: UIResponder {
     
     let applicationDelegates: [UIApplicationDelegate]?
     
-    public init(application: UIApplication, launchOptions: [AnyHashable : Any]?, applicationDelegates: [UIApplicationDelegate]?) {
-        self.applicationDelegates = applicationDelegates
+    override init() {
+        applicationDelegates = nil
     }
 }
 
 extension ApplicationController: UIApplicationDelegate {
-        
+    
+    open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
+        var canHandle = false
+        applicationDelegates?.forEach { ad in
+            if let result = ad.application?(application, didFinishLaunchingWithOptions: launchOptions) {
+                canHandle = canHandle || result // Can handle if at least one application delegate can handle.
+            }
+        }
+        return canHandle
+    }
+    
     open func applicationDidBecomeActive(_ application: UIApplication) {
         applicationDelegates?.forEach { ad in
             ad.applicationDidBecomeActive?(application)
