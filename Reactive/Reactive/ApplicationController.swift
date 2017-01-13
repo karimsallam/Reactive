@@ -50,7 +50,7 @@ extension ApplicationController: ApplicationDelegate {
                 }
             }
         } else {
-            self?.reactiveState.value = .ready
+            self.reactiveState.value = .ready
         }
         
         var canHandle = false
