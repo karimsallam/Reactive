@@ -11,7 +11,7 @@ import ReactiveSwift
 
 @objc public protocol ApplicationDelegate: UIApplicationDelegate {
     
-    @objc optional func applicationDidFinishLoadingWindow(_ application: UIApplication)
+    @objc optional func application(_ application: UIApplication, didFinishLoading window: UIWindow)
 }
 
 open class ApplicationController: UIResponder {
@@ -23,13 +23,7 @@ open class ApplicationController: UIResponder {
     public let reactiveState = MutableProperty<ReactiveState>(.loading)
 }
 
-extension ApplicationController: ApplicationDelegate {
-    
-    open func applicationDidFinishLoadingWindow(_ application: UIApplication) {
-        applicationDelegates?.forEach { ad in
-            ad.applicationDidFinishLoadingWindow?(application)
-        }
-    }
+extension ApplicationController: UIApplicationDelegate {
     
     open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
         
@@ -42,7 +36,7 @@ extension ApplicationController: ApplicationDelegate {
                         self?.reactiveState.value = .ready
                         
                         self?.applicationDelegates?.forEach { ad in
-                            ad.applicationDidFinishLoadingWindow?(application)
+                            ad.application?(application, didFinishLoading: window)
                         }
                         
                         disposable.dispose()
