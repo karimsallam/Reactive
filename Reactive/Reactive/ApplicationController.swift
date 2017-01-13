@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class ApplicationController: NSObject {
+open class ApplicationController: UIResponder {
     
     let applicationDelegates: [UIApplicationDelegate]?
     
