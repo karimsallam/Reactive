@@ -29,7 +29,7 @@ public enum ViewState {
 
 public protocol ReactiveUserInterface: class {
     
-    var reactiveState: MutableProperty<ReactiveState> { get}
+    var reactiveState: MutableProperty<ReactiveState> { get }
     
     var viewState: MutableProperty<ViewState> { get }
     

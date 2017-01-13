@@ -7,32 +7,102 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6049FAC2CC815C7DBEDB9E1F /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91BA1618CBE57502D1069C31 /* Pods_Tests.framework */; };
 		7D069F76B375B0ACE734226D /* Pods_Reactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6730464C886D8DE9BF8761AF /* Pods_Reactive.framework */; };
 		8A6D031B1E27F3CC00DE823A /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D031A1E27F3CC00DE823A /* ApplicationController.swift */; };
+		8A6D03281E28DDB900DE823A /* ReactiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D03271E28DDB900DE823A /* ReactiveTableViewCell.swift */; };
+		8A6D03841E290F6600DE823A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D03831E290F6600DE823A /* AppDelegate.swift */; };
+		8A6D03861E290F6600DE823A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D03851E290F6600DE823A /* ViewController.swift */; };
+		8A6D03891E290F6600DE823A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A6D03871E290F6600DE823A /* Main.storyboard */; };
+		8A6D038B1E290F6600DE823A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A6D038A1E290F6600DE823A /* Assets.xcassets */; };
+		8A6D038E1E290F6600DE823A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A6D038C1E290F6600DE823A /* LaunchScreen.storyboard */; };
+		8A6D039C1E29112000DE823A /* ReactiveUserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565251E241A2200BB9E06 /* ReactiveUserInterface.swift */; };
+		8A6D039D1E29112000DE823A /* ReactiveTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565241E241A2200BB9E06 /* ReactiveTableViewController.swift */; };
+		8A6D039E1E29112000DE823A /* ReactiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D03271E28DDB900DE823A /* ReactiveTableViewCell.swift */; };
+		8A6D039F1E29112000DE823A /* ReactiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565261E241A2200BB9E06 /* ReactiveViewController.swift */; };
+		8A6D03A01E29112000DE823A /* ReactiveTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565231E241A2200BB9E06 /* ReactiveTabBarController.swift */; };
+		8A6D03A11E29112000DE823A /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D031A1E27F3CC00DE823A /* ApplicationController.swift */; };
+		8A6D03A21E29112000DE823A /* ReactiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565221E241A2200BB9E06 /* ReactiveController.swift */; };
+		8A6D03AA1E2912E900DE823A /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D03A91E2912E900DE823A /* Tests.swift */; };
+		8A6D03AC1E2912E900DE823A /* Reactive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9565081E24099900BB9E06 /* Reactive.framework */; };
+		8A6D03B21E29131400DE823A /* ReactiveUserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565251E241A2200BB9E06 /* ReactiveUserInterface.swift */; };
+		8A6D03B31E29131400DE823A /* ReactiveTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565241E241A2200BB9E06 /* ReactiveTableViewController.swift */; };
+		8A6D03B41E29131400DE823A /* ReactiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D03271E28DDB900DE823A /* ReactiveTableViewCell.swift */; };
+		8A6D03B51E29131400DE823A /* ReactiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565261E241A2200BB9E06 /* ReactiveViewController.swift */; };
+		8A6D03B61E29131400DE823A /* ReactiveTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565231E241A2200BB9E06 /* ReactiveTabBarController.swift */; };
+		8A6D03B71E29131400DE823A /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D031A1E27F3CC00DE823A /* ApplicationController.swift */; };
+		8A6D03B81E29131400DE823A /* ReactiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565221E241A2200BB9E06 /* ReactiveController.swift */; };
+		8A6D03BA1E29132D00DE823A /* ReactiveTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6D03B91E29132D00DE823A /* ReactiveTableViewControllerTests.swift */; };
 		8A9565201E240E4500BB9E06 /* Reactive.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8A95651F1E240E4500BB9E06 /* Reactive.podspec */; };
 		8A9565271E241A2200BB9E06 /* ReactiveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565221E241A2200BB9E06 /* ReactiveController.swift */; };
 		8A9565281E241A2200BB9E06 /* ReactiveTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565231E241A2200BB9E06 /* ReactiveTabBarController.swift */; };
 		8A9565291E241A2200BB9E06 /* ReactiveTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565241E241A2200BB9E06 /* ReactiveTableViewController.swift */; };
 		8A95652A1E241A2200BB9E06 /* ReactiveUserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565251E241A2200BB9E06 /* ReactiveUserInterface.swift */; };
 		8A95652B1E241A2200BB9E06 /* ReactiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9565261E241A2200BB9E06 /* ReactiveViewController.swift */; };
+		D476630E68A30938BB53AFFD /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A835ADB676B65673C469DB4 /* Pods_Application.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A6D03AD1E2912E900DE823A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A9564FF1E24099900BB9E06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A9565071E24099900BB9E06;
+			remoteInfo = Reactive;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1FC1297CEE52FFA6848855C3 /* Pods-Reactive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reactive.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Reactive/Pods-Reactive.release.xcconfig"; sourceTree = "<group>"; };
+		38A856A2FABE2145EBEC6EDB /* Pods-Application.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Application.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Application/Pods-Application.debug.xcconfig"; sourceTree = "<group>"; };
+		449C122608C25D42F19E9F41 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6730464C886D8DE9BF8761AF /* Pods_Reactive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reactive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D18FACD5770B809AB0ADD63 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8A6D031A1E27F3CC00DE823A /* ApplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationController.swift; sourceTree = "<group>"; };
+		8A6D03271E28DDB900DE823A /* ReactiveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveTableViewCell.swift; sourceTree = "<group>"; };
+		8A6D03811E290F6600DE823A /* Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Application.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A6D03831E290F6600DE823A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8A6D03851E290F6600DE823A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8A6D03881E290F6600DE823A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A6D038A1E290F6600DE823A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A6D038D1E290F6600DE823A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A6D038F1E290F6600DE823A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A6D03A71E2912E900DE823A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A6D03A91E2912E900DE823A /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		8A6D03AB1E2912E900DE823A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A6D03B91E29132D00DE823A /* ReactiveTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveTableViewControllerTests.swift; sourceTree = "<group>"; };
+		8A835ADB676B65673C469DB4 /* Pods_Application.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Application.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A9565081E24099900BB9E06 /* Reactive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reactive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A95650C1E24099900BB9E06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A95650C1E24099900BB9E06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		8A95651F1E240E4500BB9E06 /* Reactive.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; name = Reactive.podspec; path = /Users/karim/Documents/Karim/Work/Karim/OpenSource/Reactive/Reactive.podspec; sourceTree = "<absolute>"; };
 		8A9565221E241A2200BB9E06 /* ReactiveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveController.swift; sourceTree = "<group>"; };
 		8A9565231E241A2200BB9E06 /* ReactiveTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveTabBarController.swift; sourceTree = "<group>"; };
 		8A9565241E241A2200BB9E06 /* ReactiveTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveTableViewController.swift; sourceTree = "<group>"; };
 		8A9565251E241A2200BB9E06 /* ReactiveUserInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveUserInterface.swift; sourceTree = "<group>"; };
 		8A9565261E241A2200BB9E06 /* ReactiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveViewController.swift; sourceTree = "<group>"; };
+		91BA1618CBE57502D1069C31 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1E37BDABA327934F1C9252 /* Pods-Reactive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reactive.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Reactive/Pods-Reactive.debug.xcconfig"; sourceTree = "<group>"; };
+		EBEDC298D1B06B8B492087CC /* Pods-Application.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Application.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Application/Pods-Application.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8A6D037E1E290F6600DE823A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D476630E68A30938BB53AFFD /* Pods_Application.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A6D03A41E2912E900DE823A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A6D03AC1E2912E900DE823A /* Reactive.framework in Frameworks */,
+				6049FAC2CC815C7DBEDB9E1F /* Pods_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A9565041E24099900BB9E06 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -92,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				8A9565241E241A2200BB9E06 /* ReactiveTableViewController.swift */,
+				8A6D03271E28DDB900DE823A /* ReactiveTableViewCell.swift */,
 			);
 			name = "Table View";
 			sourceTree = "<group>";
@@ -104,12 +175,36 @@
 			name = Reactive;
 			sourceTree = "<group>";
 		};
+		8A6D03821E290F6600DE823A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8A6D03831E290F6600DE823A /* AppDelegate.swift */,
+				8A6D03851E290F6600DE823A /* ViewController.swift */,
+				8A6D03871E290F6600DE823A /* Main.storyboard */,
+				8A6D038A1E290F6600DE823A /* Assets.xcassets */,
+				8A6D038C1E290F6600DE823A /* LaunchScreen.storyboard */,
+				8A6D038F1E290F6600DE823A /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		8A6D03A81E2912E900DE823A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8A6D03B91E29132D00DE823A /* ReactiveTableViewControllerTests.swift */,
+				8A6D03A91E2912E900DE823A /* Tests.swift */,
+				8A6D03AB1E2912E900DE823A /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		8A9564FE1E24099900BB9E06 = {
 			isa = PBXGroup;
 			children = (
 				8A95651F1E240E4500BB9E06 /* Reactive.podspec */,
 				8A95650A1E24099900BB9E06 /* Reactive */,
-				8A9565211E24113000BB9E06 /* Supporting Files */,
+				8A6D03A81E2912E900DE823A /* Tests */,
+				8A6D03821E290F6600DE823A /* Application */,
 				8A9565091E24099900BB9E06 /* Products */,
 				D9249513B1BA07DC353036D0 /* Pods */,
 				909C6E11FF156E987F0520CC /* Frameworks */,
@@ -120,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				8A9565081E24099900BB9E06 /* Reactive.framework */,
+				8A6D03811E290F6600DE823A /* Application.app */,
+				8A6D03A71E2912E900DE823A /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,24 +224,19 @@
 		8A95650A1E24099900BB9E06 /* Reactive */ = {
 			isa = PBXGroup;
 			children = (
+				8A95650C1E24099900BB9E06 /* Info.plist */,
 				8A6D03151E27F35600DE823A /* Reactive User Interfaces */,
 				8A6D03131E27F34800DE823A /* Controllers */,
 			);
 			path = Reactive;
 			sourceTree = "<group>";
 		};
-		8A9565211E24113000BB9E06 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8A95650C1E24099900BB9E06 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		909C6E11FF156E987F0520CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				6730464C886D8DE9BF8761AF /* Pods_Reactive.framework */,
+				8A835ADB676B65673C469DB4 /* Pods_Application.framework */,
+				91BA1618CBE57502D1069C31 /* Pods_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -154,6 +246,10 @@
 			children = (
 				CC1E37BDABA327934F1C9252 /* Pods-Reactive.debug.xcconfig */,
 				1FC1297CEE52FFA6848855C3 /* Pods-Reactive.release.xcconfig */,
+				38A856A2FABE2145EBEC6EDB /* Pods-Application.debug.xcconfig */,
+				EBEDC298D1B06B8B492087CC /* Pods-Application.release.xcconfig */,
+				449C122608C25D42F19E9F41 /* Pods-Tests.debug.xcconfig */,
+				7D18FACD5770B809AB0ADD63 /* Pods-Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -171,6 +267,47 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		8A6D03801E290F6600DE823A /* Application */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A6D03921E290F6600DE823A /* Build configuration list for PBXNativeTarget "Application" */;
+			buildPhases = (
+				CEE2D36555589897B9827456 /* [CP] Check Pods Manifest.lock */,
+				8A6D037D1E290F6600DE823A /* Sources */,
+				8A6D037E1E290F6600DE823A /* Frameworks */,
+				8A6D037F1E290F6600DE823A /* Resources */,
+				F89246BB612E85BAE9BE799A /* [CP] Embed Pods Frameworks */,
+				D23F7701B17EACD17544DE4D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Application;
+			productName = Application;
+			productReference = 8A6D03811E290F6600DE823A /* Application.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8A6D03A61E2912E900DE823A /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A6D03AF1E2912E900DE823A /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				F99244A856D7F329205CADE4 /* [CP] Check Pods Manifest.lock */,
+				8A6D03A31E2912E900DE823A /* Sources */,
+				8A6D03A41E2912E900DE823A /* Frameworks */,
+				8A6D03A51E2912E900DE823A /* Resources */,
+				F2616E948706525AF0E51DBE /* [CP] Embed Pods Frameworks */,
+				ADA0C62E2BA06F01E9F8BEFB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A6D03AE1E2912E900DE823A /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 8A6D03A71E2912E900DE823A /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8A9565071E24099900BB9E06 /* Reactive */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A9565101E24099900BB9E06 /* Build configuration list for PBXNativeTarget "Reactive" */;
@@ -197,9 +334,20 @@
 		8A9564FF1E24099900BB9E06 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Karim Sallam";
 				TargetAttributes = {
+					8A6D03801E290F6600DE823A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3URNZ4XSH5;
+						ProvisioningStyle = Automatic;
+					};
+					8A6D03A61E2912E900DE823A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3URNZ4XSH5;
+						ProvisioningStyle = Automatic;
+					};
 					8A9565071E24099900BB9E06 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 3URNZ4XSH5;
@@ -214,6 +362,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 8A9564FE1E24099900BB9E06;
 			productRefGroup = 8A9565091E24099900BB9E06 /* Products */;
@@ -221,11 +370,30 @@
 			projectRoot = "";
 			targets = (
 				8A9565071E24099900BB9E06 /* Reactive */,
+				8A6D03801E290F6600DE823A /* Application */,
+				8A6D03A61E2912E900DE823A /* Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8A6D037F1E290F6600DE823A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A6D038E1E290F6600DE823A /* LaunchScreen.storyboard in Resources */,
+				8A6D038B1E290F6600DE823A /* Assets.xcassets in Resources */,
+				8A6D03891E290F6600DE823A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A6D03A51E2912E900DE823A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A9565061E24099900BB9E06 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,9 +435,131 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		ADA0C62E2BA06F01E9F8BEFB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEE2D36555589897B9827456 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D23F7701B17EACD17544DE4D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Application/Pods-Application-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2616E948706525AF0E51DBE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F89246BB612E85BAE9BE799A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Application/Pods-Application-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F99244A856D7F329205CADE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8A6D037D1E290F6600DE823A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A6D03861E290F6600DE823A /* ViewController.swift in Sources */,
+				8A6D03A21E29112000DE823A /* ReactiveController.swift in Sources */,
+				8A6D039C1E29112000DE823A /* ReactiveUserInterface.swift in Sources */,
+				8A6D039D1E29112000DE823A /* ReactiveTableViewController.swift in Sources */,
+				8A6D03841E290F6600DE823A /* AppDelegate.swift in Sources */,
+				8A6D039E1E29112000DE823A /* ReactiveTableViewCell.swift in Sources */,
+				8A6D03A01E29112000DE823A /* ReactiveTabBarController.swift in Sources */,
+				8A6D03A11E29112000DE823A /* ApplicationController.swift in Sources */,
+				8A6D039F1E29112000DE823A /* ReactiveViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A6D03A31E2912E900DE823A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A6D03B61E29131400DE823A /* ReactiveTabBarController.swift in Sources */,
+				8A6D03B41E29131400DE823A /* ReactiveTableViewCell.swift in Sources */,
+				8A6D03BA1E29132D00DE823A /* ReactiveTableViewControllerTests.swift in Sources */,
+				8A6D03B81E29131400DE823A /* ReactiveController.swift in Sources */,
+				8A6D03B71E29131400DE823A /* ApplicationController.swift in Sources */,
+				8A6D03AA1E2912E900DE823A /* Tests.swift in Sources */,
+				8A6D03B31E29131400DE823A /* ReactiveTableViewController.swift in Sources */,
+				8A6D03B51E29131400DE823A /* ReactiveViewController.swift in Sources */,
+				8A6D03B21E29131400DE823A /* ReactiveUserInterface.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A9565031E24099900BB9E06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,6 +567,7 @@
 				8A6D031B1E27F3CC00DE823A /* ApplicationController.swift in Sources */,
 				8A9565281E241A2200BB9E06 /* ReactiveTabBarController.swift in Sources */,
 				8A95652A1E241A2200BB9E06 /* ReactiveUserInterface.swift in Sources */,
+				8A6D03281E28DDB900DE823A /* ReactiveTableViewCell.swift in Sources */,
 				8A9565291E241A2200BB9E06 /* ReactiveTableViewController.swift in Sources */,
 				8A95652B1E241A2200BB9E06 /* ReactiveViewController.swift in Sources */,
 				8A9565271E241A2200BB9E06 /* ReactiveController.swift in Sources */,
@@ -285,7 +576,88 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8A6D03AE1E2912E900DE823A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A9565071E24099900BB9E06 /* Reactive */;
+			targetProxy = 8A6D03AD1E2912E900DE823A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8A6D03871E290F6600DE823A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A6D03881E290F6600DE823A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8A6D038C1E290F6600DE823A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A6D038D1E290F6600DE823A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		8A6D03901E290F6600DE823A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38A856A2FABE2145EBEC6EDB /* Pods-Application.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3URNZ4XSH5;
+				INFOPLIST_FILE = Application/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.karimsallam.Application;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8A6D03911E290F6600DE823A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBEDC298D1B06B8B492087CC /* Pods-Application.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3URNZ4XSH5;
+				INFOPLIST_FILE = Application/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.karimsallam.Application;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		8A6D03B01E2912E900DE823A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 449C122608C25D42F19E9F41 /* Pods-Tests.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3URNZ4XSH5;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.karimsallam.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8A6D03B11E2912E900DE823A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D18FACD5770B809AB0ADD63 /* Pods-Tests.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3URNZ4XSH5;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.karimsallam.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		8A95650E1E24099900BB9E06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -431,6 +803,23 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8A6D03921E290F6600DE823A /* Build configuration list for PBXNativeTarget "Application" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A6D03901E290F6600DE823A /* Debug */,
+				8A6D03911E290F6600DE823A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A6D03AF1E2912E900DE823A /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A6D03B01E2912E900DE823A /* Debug */,
+				8A6D03B11E2912E900DE823A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		8A9565021E24099900BB9E06 /* Build configuration list for PBXProject "Reactive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
