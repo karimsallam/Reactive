@@ -14,8 +14,6 @@ import Result
 public protocol ReactiveTableViewUserInterface: class {
     
     var dataSource: ReactiveTableViewDataSource? { get set }
-
-    var cellForRowAtIndexPathSignal: Signal<(ReactiveTableViewCellUserInterface, IndexPath), NoError> { get }
     
     func reloadData()
 }
@@ -27,6 +25,8 @@ public protocol ReactiveTableViewDataSource: class {
     func reactiveTableViewUserInterface(_ reactiveTableViewUserInterface: ReactiveTableViewUserInterface, numberOfRowsIn section: Int) -> Int
     
     func reactiveTableViewUserInterface(_ reactiveTableViewUserInterface: ReactiveTableViewUserInterface, reusableCellIdentifierForCellAt indexPath: IndexPath) -> String
+    
+    func reactiveTableViewUserInterface(_ reactiveTableViewUserInterface: ReactiveTableViewUserInterface, bind cell: ReactiveTableViewCellUserInterface, at indexPath: IndexPath)
 }
 
 open class ReactiveTableViewController: UITableViewController {
@@ -38,12 +38,6 @@ open class ReactiveTableViewController: UITableViewController {
     public var reactiveIdentifier = UUID().uuidString
     
     public var dataSource: ReactiveTableViewDataSource?
-    
-    public var cellForRowAtIndexPathSignal: Signal<(ReactiveTableViewCellUserInterface, IndexPath), NoError> {
-        return _cellForRowAtIndexPathSignal
-    }
-    
-    private let (_cellForRowAtIndexPathSignal, cellForRowAtIndexPathObserver) = Signal<(ReactiveTableViewCellUserInterface, IndexPath), NoError>.pipe()
     
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,12 +88,11 @@ open class ReactiveTableViewController: UITableViewController {
     open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = dataSource!.reactiveTableViewUserInterface(self, reusableCellIdentifierForCellAt: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! ReactiveTableViewCell
-        cellForRowAtIndexPathObserver.send(value: (cell, indexPath))
+        dataSource?.reactiveTableViewUserInterface(self, bind: cell, at: indexPath)
         return cell
     }
     
     deinit {
-        cellForRowAtIndexPathObserver.sendCompleted()
         debugPrint("\(NSStringFromClass(type(of: self))) deallocated")
     }
 }

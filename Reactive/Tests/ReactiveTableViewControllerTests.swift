@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import ReactiveSwift
 
 class ReactiveTableViewControllerTests: XCTestCase {
     
@@ -19,9 +20,5 @@ class ReactiveTableViewControllerTests: XCTestCase {
     
     override func tearDown() {
         super.tearDown()
-    }
-    
-    func test_Deallocate_When_CellForRowAtIndexPathSignal_HasAnObserver() {
-        
-    }
+    }    
 }
