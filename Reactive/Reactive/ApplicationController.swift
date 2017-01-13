@@ -12,7 +12,7 @@ open class ApplicationController: UIResponder {
     
     let applicationDelegates: [UIApplicationDelegate]?
     
-    override init() {
+    public override init() {
         applicationDelegates = nil
     }
 }
