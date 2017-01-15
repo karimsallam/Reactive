@@ -18,6 +18,7 @@ open class ApplicationController: UIResponder {
     
     public var window: UIWindow?
     
+    // Would love to change this to let but how could you inject when using @UIApplicationMain?
     public var applicationDelegates: [ApplicationDelegate]?
     
     public let reactiveState = MutableProperty<ReactiveState>(.loading)
