@@ -93,6 +93,16 @@ extension ApplicationController: UIApplicationDelegate {
         }
     }
     
+    public func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        var canHandle = false
+        applicationDelegates?.forEach { ad in
+            if let result = ad.application?(app, open: url, options: options) {
+                canHandle = canHandle || result // Can handle if at least one application delegate can handle.
+            }
+        }
+        return canHandle
+    }
+    
     open func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
         applicationDelegates?.forEach { ad in
             ad.application?(application, didReceive: notification)
