@@ -36,6 +36,7 @@ open class ReactiveWireframe: NSObject {
             reactiveUserInterface = topViewController as! ReactiveUserInterface
         }
         reactiveController.add(reactiveUserInterface: reactiveUserInterface)
+        reactiveUserInterfaces[identifier] = reactiveUserInterface
         return reactiveUserInterface
     }
     
