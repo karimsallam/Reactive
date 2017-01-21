@@ -37,11 +37,12 @@ open class ReactiveWireframe: NSObject {
         }
         reactiveController.add(reactiveUserInterface: reactiveUserInterface)
         reactiveUserInterfaces[identifier] = reactiveUserInterface
+        
         return reactiveUserInterface
     }
     
     public func unloadReactiveUserInterface(identifier: String) {
-        precondition(reactiveUserInterfaces[identifier] == nil, "ReactiveUserInterface \(identifier) is already loaded")
+        precondition(reactiveUserInterfaces[identifier] != nil, "ReactiveUserInterface \(identifier) is not loaded")
         
         reactiveController.remove(reactiveUserInterface: reactiveUserInterfaces[identifier]!)
         reactiveUserInterfaces[identifier] = nil
