@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol UseCase: class {
+public protocol UseCase: class {
     
 }
