@@ -38,5 +38,9 @@ open class ReactiveController: NSObject {
     
     open func bind(reactiveUserInterface: ReactiveUserInterface) {
         // Do nothing.
-    }    
+    }
+    
+    deinit {
+        debugPrint("\(NSStringFromClass(type(of: self))) deallocated")
+    }
 }

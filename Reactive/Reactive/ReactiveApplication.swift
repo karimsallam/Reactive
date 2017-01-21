@@ -1,5 +1,5 @@
 //
-//  ApplicationController.swift
+//  ReactiveApplication.swift
 //  DatePlay
 //
 //  Created by Karim Sallam on 22/12/2016.
@@ -14,7 +14,7 @@ import ReactiveSwift
     @objc optional func application(_ application: UIApplication, didFinishLoading window: UIWindow)
 }
 
-open class ApplicationController: UIResponder {
+open class ReactiveApplication: UIResponder {
     
     public var window: UIWindow?
     
@@ -22,9 +22,13 @@ open class ApplicationController: UIResponder {
     public var applicationDelegates: [ApplicationDelegate]?
     
     public let reactiveState = MutableProperty<ReactiveState>(.loading)
+    
+    deinit {
+        debugPrint("\(NSStringFromClass(type(of: self))) deallocated")
+    }
 }
 
-extension ApplicationController: UIApplicationDelegate {
+extension ReactiveApplication: UIApplicationDelegate {
     
     open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
         
