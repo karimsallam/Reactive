@@ -10,9 +10,9 @@ import UIKit
 
 open class ReactiveWireframe: NSObject {
     
-    let reactiveController: ReactiveController
+    public let reactiveController: ReactiveController
     
-    let presentingViewController: UIViewController
+    public let presentingViewController: UIViewController
     
     public init(reactiveController: ReactiveController, presentingViewController: UIViewController) {
         self.reactiveController = reactiveController

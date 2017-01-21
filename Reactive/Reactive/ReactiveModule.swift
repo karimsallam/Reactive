@@ -14,3 +14,7 @@ open class ReactiveModule: NSObject {
         debugPrint("\(NSStringFromClass(type(of: self))) deallocated")
     }
 }
+
+extension ReactiveModule: UseCase {
+    
+}
