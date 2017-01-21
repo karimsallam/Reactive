@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
     spec.ios.deployment_target = '9.0'
     spec.source        = { :git => "https://github.com/karimsallam/Reactive.git" }
     spec.source_files  = "Reactive/Reactive/*"
-    spec.dependency "ReactiveSwift", "1.0.0-alpha.4"
-    spec.dependency "ReactiveCocoa", "5.0.0-alpha.3"
+    spec.dependency "ReactiveSwift", "~>1.0.0"
+    spec.dependency "ReactiveCocoa", "~>5.0.0"
     spec.framework  = "Foundation"
 end
