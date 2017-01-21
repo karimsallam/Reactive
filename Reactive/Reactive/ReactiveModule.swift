@@ -10,6 +10,14 @@ import Foundation
 
 open class ReactiveModule: NSObject {
     
+//    let a: AnyClass
+    
+    let reactiveController: ReactiveController
+    
+    public override init() {
+        reactiveController = ReactiveController()
+    }
+    
     deinit {
         debugPrint("\(NSStringFromClass(type(of: self))) deallocated")
     }

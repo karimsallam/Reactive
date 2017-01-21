@@ -14,16 +14,36 @@ open class ReactiveWireframe: NSObject {
     
     public let presentingViewController: UIViewController
     
+    private(set) public var reactiveUserInterfaces = [String : ReactiveUserInterface]()
+    
     public init(reactiveController: ReactiveController, presentingViewController: UIViewController) {
         self.reactiveController = reactiveController
         self.presentingViewController = presentingViewController
     }
     
-    public func loadUserInterfaceFromStoryboard(name: String) -> ReactiveUserInterface {
+    /// Will find the Top View Controller if it's a Navigation Controller.
+    ///
+    /// - Parameter name: Storyboard name
+    /// - Returns: User Interface
+    public func loadReactiveUserInterface(identifier: String, fromStoryboard name: String) -> ReactiveUserInterface {
+        precondition(reactiveUserInterfaces[identifier] == nil, "ReactiveUserInterface \(identifier) is already loaded")
+        
         let storyboard = UIStoryboard(name: name, bundle: nil)
-        let reactiveUserInterface = storyboard.instantiateInitialViewController() as! ReactiveUserInterface
+        var reactiveUserInterface = storyboard.instantiateInitialViewController() as! ReactiveUserInterface
+        // If it's a Navigation Controller load it's Top View Controller if it has one.
+        // We don't care about the Navigation Controller itself. We can always get it from the Top View Controller.
+        if let topViewController = (reactiveUserInterface as? ReactiveNavigationController)?.topViewController {
+            reactiveUserInterface = topViewController as! ReactiveUserInterface
+        }
         reactiveController.add(reactiveUserInterface: reactiveUserInterface)
         return reactiveUserInterface
+    }
+    
+    public func unloadReactiveUserInterface(identifier: String) {
+        precondition(reactiveUserInterfaces[identifier] == nil, "ReactiveUserInterface \(identifier) is already loaded")
+        
+        reactiveController.remove(reactiveUserInterface: reactiveUserInterfaces[identifier]!)
+        reactiveUserInterfaces[identifier] = nil
     }
     
     deinit {
