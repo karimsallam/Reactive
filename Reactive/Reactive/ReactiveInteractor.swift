@@ -1,5 +1,5 @@
 //
-//  ReactiveController.swift
+//  ReactiveInteractor.swift
 //  DatePlay
 //
 //  Created by Karim Sallam on 11/12/2016.
@@ -9,7 +9,7 @@
 import Foundation
 import ReactiveSwift
 
-open class ReactiveController: NSObject {
+open class ReactiveInteractor: NSObject {
     
     private(set) var reactiveUserInterfaces = [ReactiveUserInterface]()
     

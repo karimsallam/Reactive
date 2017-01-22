@@ -10,14 +10,14 @@ import UIKit
 
 open class ReactiveWireframe: NSObject {
     
-    public let reactiveController: ReactiveController
+    public let reactiveInteractor: ReactiveInteractor
     
     public let presentingViewController: UIViewController
     
     private(set) public var reactiveUserInterfaces = [String : ReactiveUserInterface]()
     
-    public init(reactiveController: ReactiveController, presentingViewController: UIViewController) {
-        self.reactiveController = reactiveController
+    public init(reactiveInteractor: ReactiveInteractor, presentingViewController: UIViewController) {
+        self.reactiveInteractor = reactiveInteractor
         self.presentingViewController = presentingViewController
     }
     
@@ -35,7 +35,7 @@ open class ReactiveWireframe: NSObject {
         if let topViewController = (reactiveUserInterface as? ReactiveNavigationController)?.topViewController {
             reactiveUserInterface = topViewController as! ReactiveUserInterface
         }
-        reactiveController.add(reactiveUserInterface: reactiveUserInterface)
+        reactiveInteractor.add(reactiveUserInterface: reactiveUserInterface)
         reactiveUserInterfaces[identifier] = reactiveUserInterface
         
         return reactiveUserInterface
@@ -44,7 +44,7 @@ open class ReactiveWireframe: NSObject {
     public func unloadReactiveUserInterface(identifier: String) {
         precondition(reactiveUserInterfaces[identifier] != nil, "ReactiveUserInterface \(identifier) is not loaded")
         
-        reactiveController.remove(reactiveUserInterface: reactiveUserInterfaces[identifier]!)
+        reactiveInteractor.remove(reactiveUserInterface: reactiveUserInterfaces[identifier]!)
         reactiveUserInterfaces[identifier] = nil
     }
     

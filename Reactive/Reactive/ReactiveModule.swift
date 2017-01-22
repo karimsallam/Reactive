@@ -12,10 +12,10 @@ open class ReactiveModule: NSObject {
     
 //    let a: AnyClass
     
-    let reactiveController: ReactiveController
+    let reactiveInteractor: ReactiveInteractor
     
     public override init() {
-        reactiveController = ReactiveController()
+        reactiveInteractor = ReactiveInteractor()
     }
     
     deinit {
