@@ -8,11 +8,9 @@
 
 import UIKit
 
-public protocol ReactiveWireframeProtocol: class {
+public protocol BaseReactiveWireframeProtocol: class {
     
     init(presentingViewController: UIViewController)
-
-    weak var reactivePresenterProtocol: ReactivePresenterProtocol? { get set }
     
     var presentingViewController: UIViewController { get }
     
@@ -21,9 +19,7 @@ public protocol ReactiveWireframeProtocol: class {
     func unloadReactiveUserInterface(identifier: String)
 }
 
-open class ReactiveWireframe {
-    
-    public weak var reactivePresenterProtocol: ReactivePresenterProtocol?
+open class BaseReactiveWireframe: BaseReactiveWireframeProtocol {
     
     public let presentingViewController: UIViewController
     
@@ -32,13 +28,6 @@ open class ReactiveWireframe {
     public required init(presentingViewController: UIViewController) {
         self.presentingViewController = presentingViewController
     }
-    
-    deinit {
-        debugPrint("\(NSStringFromClass(type(of: self))) deallocated")
-    }
-}
-
-extension ReactiveWireframe: ReactiveWireframeProtocol {
     
     /// Will find the Top View Controller if it's a Navigation Controller.
     ///
@@ -54,7 +43,6 @@ extension ReactiveWireframe: ReactiveWireframeProtocol {
         if let topViewController = (reactiveUserInterface as? ReactiveNavigationController)?.topViewController {
             reactiveUserInterface = topViewController as! ReactiveUserInterface
         }
-        reactivePresenterProtocol?.add(reactiveUserInterface: reactiveUserInterface)
         reactiveUserInterfaces[identifier] = reactiveUserInterface
         
         return reactiveUserInterface
@@ -63,7 +51,31 @@ extension ReactiveWireframe: ReactiveWireframeProtocol {
     public func unloadReactiveUserInterface(identifier: String) {
         precondition(reactiveUserInterfaces[identifier] != nil, "ReactiveUserInterface \(identifier) is not loaded")
         
-        reactivePresenterProtocol?.remove(reactiveUserInterface: reactiveUserInterfaces[identifier]!)
         reactiveUserInterfaces[identifier] = nil
+    }
+    
+    deinit {
+        debugPrint("\(NSStringFromClass(type(of: self))) deallocated")
+    }
+}
+
+public protocol ReactiveWireframeProtocol: BaseReactiveWireframeProtocol {
+    
+    weak var reactivePresenterProtocol: ReactivePresenterProtocol? { get set }
+}
+
+open class ReactiveWireframe: BaseReactiveWireframe, ReactiveWireframeProtocol {
+    
+    public weak var reactivePresenterProtocol: ReactivePresenterProtocol?
+
+    override public func loadReactiveUserInterface(identifier: String, fromStoryboard name: String) -> ReactiveUserInterface {
+        let reactiveUserInterface = super.loadReactiveUserInterface(identifier: identifier, fromStoryboard: name)
+        reactivePresenterProtocol?.add(reactiveUserInterface: reactiveUserInterface)
+        return reactiveUserInterface
+    }
+    
+    override public func unloadReactiveUserInterface(identifier: String) {
+        reactivePresenterProtocol?.remove(reactiveUserInterface: reactiveUserInterfaces[identifier]!)
+        super.unloadReactiveUserInterface(identifier: identifier)
     }
 }

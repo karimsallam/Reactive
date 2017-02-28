@@ -9,32 +9,40 @@
 import Foundation
 import ReactiveSwift
 
-public protocol ReactivePresenterProtocol: class {
+public protocol BaseReactivePresenterProtocol: class {
     
     init()
     
-    weak var reactiveInteractorProtocol: ReactiveInteractorProtocol? { get set }
-
-    weak var reactiveWireframeProtocol: ReactiveWireframeProtocol? { get set }
-
+    //    weak var reactiveInteractorProtocol: ReactiveInteractorProtocol? { get set }
+    //
+    //    weak var reactiveWireframeProtocol: ReactiveWireframeProtocol? { get set }
+    
     var reactiveUserInterfaces: [ReactiveUserInterface] { get }
-
+    
     func add(reactiveUserInterface: ReactiveUserInterface)
-
+    
     func remove(reactiveUserInterface: ReactiveUserInterface)
 }
 
-open class ReactivePresenter {
+open class BaseReactivePresenter: BaseReactivePresenterProtocol {
     
     public required init() {
         
     }
-
-    public weak var reactiveInteractorProtocol: ReactiveInteractorProtocol?
-
-    public weak var reactiveWireframeProtocol: ReactiveWireframeProtocol?
     
     internal(set) public var reactiveUserInterfaces = [ReactiveUserInterface]()
+    
+    public func add(reactiveUserInterface: ReactiveUserInterface) {
+        reactiveUserInterfaces.append(reactiveUserInterface)
+        observe(reactiveUserInterface: reactiveUserInterface)
+    }
+    
+    public func remove(reactiveUserInterface: ReactiveUserInterface) {
+        guard let index = reactiveUserInterfaces.index(where: { $0 == reactiveUserInterface }) else {
+            fatalError("\(reactiveUserInterface) not found")
+        }
+        reactiveUserInterfaces.remove(at: index)
+    }
     
     internal func observe(reactiveUserInterface: ReactiveUserInterface) {
         reactiveUserInterface.reactiveState.producer.startWithSignal { observer, disposable in
@@ -56,17 +64,17 @@ open class ReactivePresenter {
     }
 }
 
-extension ReactivePresenter: ReactivePresenterProtocol {
+public protocol ReactivePresenterProtocol: BaseReactivePresenterProtocol {
     
-    public func add(reactiveUserInterface: ReactiveUserInterface) {
-        reactiveUserInterfaces.append(reactiveUserInterface)
-        observe(reactiveUserInterface: reactiveUserInterface)
-    }
+    weak var reactiveInteractorProtocol: ReactiveInteractorProtocol? { get set }
     
-    public func remove(reactiveUserInterface: ReactiveUserInterface) {
-        guard let index = reactiveUserInterfaces.index(where: { $0 == reactiveUserInterface }) else {
-            fatalError("\(reactiveUserInterface) not found")
-        }
-        reactiveUserInterfaces.remove(at: index)
-    }
+    weak var reactiveWireframeProtocol: ReactiveWireframeProtocol? { get set }
 }
+
+open class ReactivePresenter: BaseReactivePresenter, ReactivePresenterProtocol {
+    
+    public weak var reactiveInteractorProtocol: ReactiveInteractorProtocol?
+    
+    public weak var reactiveWireframeProtocol: ReactiveWireframeProtocol?    
+}
+

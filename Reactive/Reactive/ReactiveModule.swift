@@ -10,12 +10,12 @@ import UIKit
 
 open class ReactiveModule<ReactiveInteractor: ReactiveInteractorProtocol, ReactivePresenter: ReactivePresenterProtocol, ReactiveWireframe: ReactiveWireframeProtocol> {
     
-    private(set) public var reactiveInteractor: ReactiveInteractor
+    public let reactiveInteractor: ReactiveInteractor
     
-    private(set) public var reactivePresenter: ReactivePresenter
-
-    private(set) public var reactiveWireframe: ReactiveWireframe
-
+    public let reactivePresenter: ReactivePresenter
+    
+    public let reactiveWireframe: ReactiveWireframe
+    
     public init(presentingViewController: UIViewController) {
         reactiveInteractor = ReactiveInteractor()
         reactivePresenter = ReactivePresenter()

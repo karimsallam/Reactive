@@ -640,6 +640,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 38A856A2FABE2145EBEC6EDB /* Pods-Application.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3URNZ4XSH5;
 				INFOPLIST_FILE = Application/Info.plist;
@@ -654,6 +655,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EBEDC298D1B06B8B492087CC /* Pods-Application.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3URNZ4XSH5;
 				INFOPLIST_FILE = Application/Info.plist;
@@ -668,6 +670,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 449C122608C25D42F19E9F41 /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3URNZ4XSH5;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -681,6 +684,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7D18FACD5770B809AB0ADD63 /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3URNZ4XSH5;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

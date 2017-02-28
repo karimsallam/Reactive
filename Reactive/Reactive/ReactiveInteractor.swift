@@ -9,18 +9,25 @@
 import Foundation
 import ReactiveSwift
 
-public protocol ReactiveInteractorProtocol: class {
+public protocol BaseReactiveInteractorProtocol: class {
     
     init()
 }
 
-open class ReactiveInteractor {
+open class BaseReactiveInteractor: BaseReactiveInteractorProtocol {
     
     public required init() {
         
     }
+    
+    deinit {
+        debugPrint("\(NSStringFromClass(type(of: self))) deallocated")
+    }
 }
 
-extension ReactiveInteractor: ReactiveInteractorProtocol {
+public protocol ReactiveInteractorProtocol: BaseReactiveInteractorProtocol {
+}
+
+open class ReactiveInteractor: BaseReactiveInteractor, ReactiveInteractorProtocol {
     
 }
