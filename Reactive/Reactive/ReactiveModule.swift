@@ -6,16 +6,24 @@
 //  Copyright © 2017 Karim Sallam. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-open class ReactiveModule: NSObject {
+open class ReactiveModule<ReactiveInteractor: ReactiveInteractorProtocol, ReactivePresenter: ReactivePresenterProtocol, ReactiveWireframe: ReactiveWireframeProtocol> {
     
-//    let a: AnyClass
+    private(set) public var reactiveInteractor: ReactiveInteractor
     
-    let reactiveInteractor: ReactiveInteractor
-    
-    public override init() {
+    private(set) public var reactivePresenter: ReactivePresenter
+
+    private(set) public var reactiveWireframe: ReactiveWireframe
+
+    public init(presentingViewController: UIViewController) {
         reactiveInteractor = ReactiveInteractor()
+        reactivePresenter = ReactivePresenter()
+        reactiveWireframe = ReactiveWireframe(presentingViewController: presentingViewController)
+        
+        reactivePresenter.reactiveInteractorProtocol = reactiveInteractor
+        reactivePresenter.reactiveWireframeProtocol = reactiveWireframe
+        reactiveWireframe.reactivePresenterProtocol = reactivePresenter
     }
     
     deinit {
@@ -25,4 +33,7 @@ open class ReactiveModule: NSObject {
 
 extension ReactiveModule: UseCase {
     
+    public var presentingViewController : UIViewController {
+        return reactiveWireframe.presentingViewController
+    }
 }

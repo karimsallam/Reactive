@@ -8,19 +8,47 @@
 
 import UIKit
 
-open class ReactiveWireframe: NSObject {
+public protocol ReactiveWireframeProtocol: class {
     
-    public let reactiveInteractor: ReactiveInteractor
+    init(presentingViewController: UIViewController)
+
+    weak var reactivePresenterProtocol: ReactivePresenterProtocol? { get set }
+    
+    var presentingViewController: UIViewController { get }
+    
+    func loadReactiveUserInterface(identifier: String, fromStoryboard name: String) -> ReactiveUserInterface
+    
+    func unloadReactiveUserInterface(identifier: String)
+}
+
+open class ReactiveWireframe<ReactivePresenter: ReactivePresenterProtocol> {
+    
+    public weak var reactivePresenter: ReactivePresenter?
     
     public let presentingViewController: UIViewController
     
-    private(set) public var reactiveUserInterfaces = [String : ReactiveUserInterface]()
+    internal var reactiveUserInterfaces = [String : ReactiveUserInterface]()
     
-    public init(reactiveInteractor: ReactiveInteractor, presentingViewController: UIViewController) {
-        self.reactiveInteractor = reactiveInteractor
+    public required init(presentingViewController: UIViewController) {
         self.presentingViewController = presentingViewController
     }
     
+    deinit {
+        debugPrint("\(NSStringFromClass(type(of: self))) deallocated")
+    }
+}
+
+extension ReactiveWireframe: ReactiveWireframeProtocol {
+    
+    public weak var reactivePresenterProtocol: ReactivePresenterProtocol? {
+        get {
+            return reactivePresenter
+        }
+        set {
+            reactivePresenter = newValue as? ReactivePresenter
+        }
+    }
+
     /// Will find the Top View Controller if it's a Navigation Controller.
     ///
     /// - Parameter name: Storyboard name
@@ -35,7 +63,7 @@ open class ReactiveWireframe: NSObject {
         if let topViewController = (reactiveUserInterface as? ReactiveNavigationController)?.topViewController {
             reactiveUserInterface = topViewController as! ReactiveUserInterface
         }
-        reactiveInteractor.add(reactiveUserInterface: reactiveUserInterface)
+        reactivePresenter?.add(reactiveUserInterface: reactiveUserInterface)
         reactiveUserInterfaces[identifier] = reactiveUserInterface
         
         return reactiveUserInterface
@@ -44,11 +72,7 @@ open class ReactiveWireframe: NSObject {
     public func unloadReactiveUserInterface(identifier: String) {
         precondition(reactiveUserInterfaces[identifier] != nil, "ReactiveUserInterface \(identifier) is not loaded")
         
-        reactiveInteractor.remove(reactiveUserInterface: reactiveUserInterfaces[identifier]!)
+        reactivePresenter?.remove(reactiveUserInterface: reactiveUserInterfaces[identifier]!)
         reactiveUserInterfaces[identifier] = nil
-    }
-    
-    deinit {
-        debugPrint("\(NSStringFromClass(type(of: self))) deallocated")
     }
 }

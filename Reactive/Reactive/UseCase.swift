@@ -6,8 +6,9 @@
 //  Copyright © 2017 Karim Sallam. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public protocol UseCase: class {
     
+    var presentingViewController : UIViewController { get }
 }
