@@ -24,15 +24,15 @@ public protocol ReactivePresenterProtocol: class {
     func remove(reactiveUserInterface: ReactiveUserInterface)
 }
 
-open class ReactivePresenter<ReactiveInteractor: ReactiveInteractorProtocol, ReactiveWireframe: ReactiveWireframeProtocol> {
+open class ReactivePresenter {
     
     public required init() {
         
     }
 
-    public weak var reactiveInteractor: ReactiveInteractor?
+    public weak var reactiveInteractorProtocol: ReactiveInteractorProtocol?
 
-    public weak var reactiveWireframe: ReactiveWireframe?
+    public weak var reactiveWireframeProtocol: ReactiveWireframeProtocol?
     
     internal(set) public var reactiveUserInterfaces = [ReactiveUserInterface]()
     
@@ -58,24 +58,6 @@ open class ReactivePresenter<ReactiveInteractor: ReactiveInteractorProtocol, Rea
 
 extension ReactivePresenter: ReactivePresenterProtocol {
     
-    public weak var reactiveInteractorProtocol: ReactiveInteractorProtocol? {
-        get {
-            return reactiveInteractor
-        }
-        set {
-            reactiveInteractor = newValue as? ReactiveInteractor
-        }
-    }
-
-    public weak var reactiveWireframeProtocol: ReactiveWireframeProtocol? {
-        get {
-            return reactiveWireframe
-        }
-        set {
-            reactiveWireframe = newValue as? ReactiveWireframe
-        }
-    }
-
     public func add(reactiveUserInterface: ReactiveUserInterface) {
         reactiveUserInterfaces.append(reactiveUserInterface)
         observe(reactiveUserInterface: reactiveUserInterface)

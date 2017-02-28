@@ -21,9 +21,9 @@ public protocol ReactiveWireframeProtocol: class {
     func unloadReactiveUserInterface(identifier: String)
 }
 
-open class ReactiveWireframe<ReactivePresenter: ReactivePresenterProtocol> {
+open class ReactiveWireframe {
     
-    public weak var reactivePresenter: ReactivePresenter?
+    public weak var reactivePresenterProtocol: ReactivePresenterProtocol?
     
     public let presentingViewController: UIViewController
     
@@ -40,15 +40,6 @@ open class ReactiveWireframe<ReactivePresenter: ReactivePresenterProtocol> {
 
 extension ReactiveWireframe: ReactiveWireframeProtocol {
     
-    public weak var reactivePresenterProtocol: ReactivePresenterProtocol? {
-        get {
-            return reactivePresenter
-        }
-        set {
-            reactivePresenter = newValue as? ReactivePresenter
-        }
-    }
-
     /// Will find the Top View Controller if it's a Navigation Controller.
     ///
     /// - Parameter name: Storyboard name
@@ -63,7 +54,7 @@ extension ReactiveWireframe: ReactiveWireframeProtocol {
         if let topViewController = (reactiveUserInterface as? ReactiveNavigationController)?.topViewController {
             reactiveUserInterface = topViewController as! ReactiveUserInterface
         }
-        reactivePresenter?.add(reactiveUserInterface: reactiveUserInterface)
+        reactivePresenterProtocol?.add(reactiveUserInterface: reactiveUserInterface)
         reactiveUserInterfaces[identifier] = reactiveUserInterface
         
         return reactiveUserInterface
@@ -72,7 +63,7 @@ extension ReactiveWireframe: ReactiveWireframeProtocol {
     public func unloadReactiveUserInterface(identifier: String) {
         precondition(reactiveUserInterfaces[identifier] != nil, "ReactiveUserInterface \(identifier) is not loaded")
         
-        reactivePresenter?.remove(reactiveUserInterface: reactiveUserInterfaces[identifier]!)
+        reactivePresenterProtocol?.remove(reactiveUserInterface: reactiveUserInterfaces[identifier]!)
         reactiveUserInterfaces[identifier] = nil
     }
 }
