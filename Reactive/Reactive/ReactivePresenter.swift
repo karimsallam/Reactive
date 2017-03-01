@@ -13,10 +13,6 @@ public protocol BaseReactivePresenterProtocol: class {
     
     init()
     
-    //    weak var reactiveInteractorProtocol: ReactiveInteractorProtocol? { get set }
-    //
-    //    weak var reactiveWireframeProtocol: ReactiveWireframeProtocol? { get set }
-    
     var reactiveUserInterfaces: [ReactiveUserInterface] { get }
     
     func add(reactiveUserInterface: ReactiveUserInterface)

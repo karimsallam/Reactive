@@ -38,11 +38,13 @@ open class BaseReactiveWireframe: BaseReactiveWireframeProtocol {
         
         let storyboard = UIStoryboard(name: name, bundle: nil)
         var reactiveUserInterface = storyboard.instantiateInitialViewController() as! ReactiveUserInterface
+        
         // If it's a Navigation Controller load it's Top View Controller if it has one.
         // We don't care about the Navigation Controller itself. We can always get it from the Top View Controller.
         if let topViewController = (reactiveUserInterface as? ReactiveNavigationController)?.topViewController {
             reactiveUserInterface = topViewController as! ReactiveUserInterface
         }
+        
         reactiveUserInterfaces[identifier] = reactiveUserInterface
         
         return reactiveUserInterface
@@ -56,6 +58,13 @@ open class BaseReactiveWireframe: BaseReactiveWireframeProtocol {
     
     deinit {
         debugPrint("\(NSStringFromClass(type(of: self))) deallocated")
+    }
+}
+
+extension BaseReactiveWireframe {
+    
+    var presentingTabBarController: ReactiveTabBarController? {
+        return presentingViewController as? ReactiveTabBarController
     }
 }
 
@@ -79,3 +88,4 @@ open class ReactiveWireframe: BaseReactiveWireframe, ReactiveWireframeProtocol {
         super.unloadReactiveUserInterface(identifier: identifier)
     }
 }
+

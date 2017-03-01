@@ -9,7 +9,7 @@
 import UIKit
 
 open class ReactiveModule<ReactiveInteractor: ReactiveInteractorProtocol, ReactivePresenter: ReactivePresenterProtocol, ReactiveWireframe: ReactiveWireframeProtocol> {
-    
+        
     public let reactiveInteractor: ReactiveInteractor
     
     public let reactivePresenter: ReactivePresenter

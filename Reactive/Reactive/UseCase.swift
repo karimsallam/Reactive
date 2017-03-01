@@ -10,5 +10,4 @@ import UIKit
 
 public protocol UseCase: class {
     
-    var presentingViewController : UIViewController { get }
 }
